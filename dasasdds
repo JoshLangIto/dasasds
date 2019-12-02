@@ -1,0 +1,40 @@
+package fLabwork2;
+import java.util.Scanner;
+public class flabwork3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner dog = new Scanner(System.in);
+		int inptime;
+		char tryagain = 'N';
+		
+		do {
+		System.out.println("How many inputs will you make?");
+		inptime = dog.nextInt();
+		int index = 0;
+		int[] grade = new int[inptime];
+		
+		while (index < inptime)
+		{
+			System.out.println("Enter Grade");
+			grade [index] =dog.nextInt(); 
+		
+			if (grade [index] >= 70)
+			{
+				System.out.println("Passing Grade");
+			}
+			else 
+			{
+				System.out.println("Failling Grade");
+			}
+			++index;
+		}
+		
+		System.out.println("Do you want to try again");
+		tryagain = dog.next().charAt(0);
+		
+	}while (tryagain != 'N');
+
+		}
+
+}
